@@ -22,5 +22,5 @@ if (relocationValue < str.length) {
     console.log(`The original string is ${str} and the modified string is ${modstr}. You see no difference because the string length is equal to ${relocationValue}.`)
 } else {
     modstr = str.slice(3, str.length) + str.slice(0, 3);
-    console.log(`The number you entered is longer than the word. If you had entered 3, your modified string would be ${modstr}.`)
+    console.log(`The number you entered is longer than the word. If you had entered 3, the original string is ${str} and the modified string would be ${modstr}.`)
 }
