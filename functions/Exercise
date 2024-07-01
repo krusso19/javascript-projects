@@ -1,0 +1,84 @@
+
+function makeLine(size) {
+    let line = '';
+    for (let i = 0; i < size; i++) {
+        line = line + "#";
+    }
+    return line;
+}
+
+console.log(makeLine(3));
+
+//makeSquare
+function makeSquare(size) {
+    let square = '';
+    for (let i = 0; i < size - 1; i++) {
+        square += (makeLine(size) + '\n');
+    }
+    return square;
+}
+
+console.log(makeSquare(3));
+
+//makeRectangle
+function makeRectangle(width,height){
+    let rectangle = '';
+    for (let i = 0; i <height; i++) {
+        rectangle += (makeLine(width) + "\n");
+    }
+    return rectangle;
+}
+
+console.log(makeRectangle(4,5));
+
+//makeDownwardStairs(height)
+function makeDownwardStairs(height) {
+    let downwardStairs = '';
+    for (let i = 0; i <= height; i++) {
+        downwardStairs += (makeLine(i) + '\n')
+    }
+    return downwardStairs;
+}
+console.log(makeDownwardStairs(7));
+
+//makeSpaceLine(numSpaces, numChars)
+function makeSpaceLine(numSpaces, numChars) {
+    let spaces = '';
+    let spaceLine = '';
+    for (let i = 0; i < numSpaces; i++) {
+        spaces += " "
+    }
+    spaceLine = spaces + makeLine(numChars) + spaces
+    return spaceLine;
+}
+console.log(makeSpaceLine(3,3))
+
+//makeIsoscelesTriangle(height)
+function makeIsoscelesTriangle(height) {
+    let isoscelesTriangle = '';
+    for (let i = 0; i < height; i++) {
+        isoscelesTriangle += (makeSpaceLine((height-(i+1)),(2*i+1)) + "\n");
+    }
+    return isoscelesTriangle.slice(0,-1);
+}
+console.log(`Isosceles Triangle:
+${makeIsoscelesTriangle(5)}`)
+
+//reverse for diamond
+function reverse(str) {
+    let reversed = '';
+    for (let i = 0; i < str.length; i++) {
+        reversed = str[i] + reversed;
+    }
+    return reversed;
+}
+//makeDiamond(height)
+function makeDiamond(height){
+    let diamond = "";
+        diamond += (makeIsoscelesTriangle(height) + "\n" + reverse(makeIsoscelesTriangle(height)))
+    return diamond;
+}
+console.log(makeDiamond(5));
+
+//KT not sure why there is a space in the diamond. Probably because of the \n in isosceles triangle. But idk how to get rid of that.
+//KT the triangle.slice(0,-1) does that. it gets rid of the empty line at the bottom.
