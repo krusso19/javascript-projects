@@ -72,14 +72,20 @@ crewReports(doggo);
 
 // Start an animal race!
 
-function fitnessTest(crew) {
- let numberOfTurns = 0
- let steps = 0
-   while (steps < 20) {
-      steps = crew.move() + steps;
-      numberOfTurns = numberOfTurns + 1;
-   }
-   return `${crew.name} took ${numberOfTurns} turns to take 20 steps.`
+function fitnessTest(candidates) {
+   let results = [];
+   for (i = 0; i < candidates.length; i++) {
+      let numberOfTurns = 0;
+      let steps = 0;
+
+         while (steps < 20) {
+            steps = candidates[i].move() + steps;
+            numberOfTurns = numberOfTurns + 1;
+         }
+
+         results.push(`${candidates[i].name} took ${numberOfTurns} turns to take 20 steps.`);
+      }
+   return results.join("\n");
 }
 
-console.log(fitnessTest(superChimpOne));
+console.log(fitnessTest(crew));
