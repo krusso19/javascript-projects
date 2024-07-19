@@ -5,4 +5,4 @@ function randomFromArray(arr){
 };
 
 //TODO: Export the randomFromArray function.
-module.export = randomFromArray;
+module.exports = randomFromArray;
