@@ -30,3 +30,6 @@ class AstronautI {
  
  console.log(fox);
  console.log(hippo);
+
+ //KT Fox prints out/stores the method or function because it was assigned inside the class. Anonymous /function
+ //KT Hippo only prints out the properties. This is cleaner and more efficient. 

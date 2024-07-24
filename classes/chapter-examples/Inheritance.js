@@ -1,6 +1,7 @@
 class Felidae {
 	constructor() {
 		this.claws = "retractable";
+		this.color = "red";
 	}
 }
 
@@ -11,6 +12,10 @@ class Panthera extends Felidae {
 	}
 }
 
+//Felidae.potatoPreference = "mashed";
+//console.log(Felidae);
+//KT this just prints [class Felidae] {potatoPreference = "mashed"} ... why?
+
 class Tiger extends Panthera {
 	constructor() {
     super();
@@ -19,5 +24,7 @@ class Tiger extends Panthera {
 }
 
 let tigger = new Tiger();
+
+tigger.potatoPreference = "mashed";
 
 console.log(tigger);
