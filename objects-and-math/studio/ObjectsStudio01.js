@@ -1,6 +1,8 @@
 // Code your selectRandomEntry function here:
-
-
+//KT - adding a comment to see if git push works
+function selectRandomEntry(){
+}
+console.log("hello line 5")
 // Code your buildCrewArray function here:
 
 
