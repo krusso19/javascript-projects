@@ -9,6 +9,30 @@
         <h1>Flight Simulator</h1>
         <p id="statusReport">The shuttle is on the ground</p>
         <button id = "liftoffButton">Take off</button>
+        <script>
+            let b = document.getElementById("liftoffButton");
+            b.addEventListener('click', function(event){
+                window.alert('Houston! We have liftoff!');
+            });
+        </script>
         <button id = "abortMission">Abort mission</button>
+        <script>
+           let abortButtonForColor = document.getElementById("abortMission");
+           abortButtonForColor.addEventListener("mouseover", function(event){
+               //button style="background-color:red>abortButtonForColor</button>
+                //line to change the color of abortMission
+            });
+            let abortButtonReturn = document.getElementById("abortMission");
+            abortButtonReturn.addEventListener("mouseout", function (){
+                //line to change the color
+            });
+            let abortButton = document.getElementById("abortMission");
+            abortButton.addEventListener('click', function(event){
+                let answer = window.confirm("Are you sure you want to abort the mission?");
+                if (answer === true){
+                    window.alert("Mission aborted! Space Shuttle returning home.")
+                }
+            });
+        </script>
     </body>
 </html>
