@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<script>
 		function setSearchEngine() {
-			
-			return actionsURL[document.querySelector("input[name=engine]:checked").value];
+			document.getElementById('searchForm').setAttribute("action", actionsURL[document.querySelector("input[name=engine]:checked").value]);
+			return;
 		};
     window.addEventListener("load", function(){
         let button = document.getElementById("goButton");
@@ -16,9 +16,9 @@
 			duckduckgo: 'https://duckduckgo.com/',
 			bing: 'https://www.bing.com/search',
 			ask: 'https://www.ask.com/web'
-
 		};
-		form.setAttribute("action", setSearchEngine);
+		let searchForm = document.getElementById('searchForm');
+		searchForm.setAttribute("action", );
 	</script>
 </head>
 
